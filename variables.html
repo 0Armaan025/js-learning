@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables in javascript</title>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+    <button onclick="myFunction()">Click me</button>
+
+    <script>
+        let x = 3;
+        x = 6; // now x is 6
+
+        var y = 3;
+        y = 8; // now y is 8
+
+        const z = 3;
+        // z = 8; // this can't be changed
+
+        const user = {
+            name: "Armaan",
+            age: 15,
+            isOnLeaveToday: true,
+        }
+
+        let carName = "BMW";
+        const carsIOwn = ["none", 'none', "none"];
+        function myFunction() {
+            const newPerson = {};
+
+            newPerson.newProperty = "new value";
+            document.getElementById("demo").innerHTML = 'Your details are: ' + carsIOwn[0] + "<br/>" + carsIOwn[1] + newPerson.newProperty;
+            // this thing changed the text by getting the element by id
+            alert(typeof carsIOwn);
+        }
+    </script>
+
+</body>
+
+</html>

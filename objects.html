@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables in javascript</title>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+    <button onclick="myFunction()">Click me</button>
+
+
+    <script>
+
+        function User(first, age, isHappy, city) {
+            this.first = first;
+            this.age = age;
+            this.isHappy = true;
+            this.city = city;
+        }
+
+        const armaan = new User("Armaan", 15, true, "i will not tell that for now");
+
+
+        function myFunction() {
+            User.prototype.newCity = "default new city";
+            let text = '';
+            for (let x in armaan) {
+                text += armaan[x] + "<br>";
+            }
+            document.getElementById('demo').innerHTML = text;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
